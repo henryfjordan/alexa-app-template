@@ -1,7 +1,7 @@
 # alexa-app-template
 A template for an app using alexa-app.
 
-## Alexa Skill Philosopy
+## Alexa Skill Philosophy
 
 An Alexa Skill can live either on AWS Lambda or on your private server as an API endpoint. On AWS Lambda, the Skill has no access to your home network, files, physical devices, etc. You are also limited to writing in Java and Javascript. On your private server, you need to ensure the security and stability of your connection to Amazon (which is not trivial).
 
