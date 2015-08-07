@@ -1,7 +1,9 @@
 alexa-app-template
 ==============================
 
-A template for an app using ``alexa-app``
+A template for an app using alexa-app_.
+
+.. _alexa-app: https://github.com/matt-kruse/alexa-app
 
 Alexa Skill Philosopy
 --------------------
@@ -13,7 +15,7 @@ This template attempts to solve the problem of where to host an Alexa Skill by g
 
 I propose that a Skill should be hosted on AWS Lambda and only concern itself with querying an API endpoint and formatting the response.
 
-For anything that must reside on your home network (pysical devices, files, etc.) you can set up a server with ``Express``,``Flask``, or whatever framework you are familiar with.
+For anything that must reside on your home network (pysical devices, files, etc.) you can set up a server with ``Express``, ``Flask``, or whatever framework you are familiar with.
 
 Use
 ---------------
