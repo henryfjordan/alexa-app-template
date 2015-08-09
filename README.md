@@ -36,7 +36,7 @@ Start by installing the Lambda function's dependencies
 cd lamba && npm install
 ```
 
-Edit your [Alexa Skill](http://github.com/matt-kruse/alexa-app). Then compress the code into a zip file
+Edit your [Alexa Skill](http://github.com/matt-kruse/alexa-app). Then compress the code into a zip file. You need to compress the contents of the lambda folder, including `node_modules` but not the lambda folder itself
 ```bash
 zip -X -r Archive.zip .
 ```
