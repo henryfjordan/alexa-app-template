@@ -1,0 +1,24 @@
+#!/sbin/runscript
+# Copyright 1999-2015 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+NODE=/usr/bin/node
+PIDFILE=/var/run/alexa.pid
+SCRIPT=/home/henry/github/alexa-app-template/server/index.js
+
+depend() {
+  need net
+}
+
+start() {
+  ebegin "Starting website"
+  start-stop-daemon --background --start -m --pidfile ${PIDFILE} --exec ${NODE} ${SCRIPT}
+  eend $?
+}
+
+stop() {
+  ebegin "Stopping website"
+  start-stop-daemon --stop --pidfile ${PIDFILE}
+  eend $?
+}
