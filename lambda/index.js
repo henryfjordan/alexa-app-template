@@ -8,7 +8,7 @@ var app = new alexa.app();
 app.launch(function(request, response) {
     httpRequest.get(
         {
-					  // Change me to your server URL
+            // Change me to your server URL
             url: "http://example.com/alexa",
         },
         function(err, httpResponse, body){
@@ -33,7 +33,7 @@ app.intent('ExampleIntent',
 
         httpRequest.get(
             {
-							  // change me to your server URL
+                // change me to your server URL
                 url: "http://example.com/alexa/" + encodeURIComponent(name),
             },
             function(err, httpResponse, body){
