@@ -16,19 +16,19 @@ app.launch(function(request, response) {
 			response.send();
 		}
 	);
-	
+
 	return false;
 });
 
 // An intent
 app.intent('ExampleIntent',
   {
-    "slots":{"name":"LITERAL"},
+    "slots":{"NAME":"LITERAL"},
 		"utterances":[ "my {name is|name's} {name|NAME}"]
   },
   function(request, response) {
 
-		var name = request.slot('name');
+		var name = request.slot('NAME');
 
 		httpRequest.get(
 			{
