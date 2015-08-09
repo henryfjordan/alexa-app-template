@@ -7,11 +7,11 @@ var app = new alexa.app();
 
 // Launch runs when a user queries the skill without an intent
 app.launch(function(request,response) {
-	response.say("I can poll an API and then format and read the response. Right now I go find a random quote on design")
+	response.say("I can poll an API and then format and read the response. Right now I am an example")
 });
 
 // An intent
-app.intent('QuoteIntent',
+app.intent('ExampleIntent',
   {
     "slots":{}
     ,"utterances":[ "{try|test} me out", "run a test" ]
@@ -19,12 +19,11 @@ app.intent('QuoteIntent',
   function(request,response) {
 		request_lib.get(
 			{
-				url: 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
+				url: 'http://example.com/alexa/',
 			},
 			function(err, httpResponse, body){
-				quote = striptags(JSON.parse(body)[0].content);
-				response.say(quote);
-				response.card("Quote", quote);
+				response.say(body);
+				response.card("Example", body);
 				response.send();
 		 	}
 		);

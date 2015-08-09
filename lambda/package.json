@@ -1,0 +1,27 @@
+{
+  "name": "alexa-app-lambda",
+  "version": "1.0.0",
+  "description": "The lambda code for an alexa skill",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henryfjordan/alexa-app-template.git"
+  },
+  "keywords": [
+    "alexa"
+  ],
+  "author": "Henry Jordan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/henryfjordan/alexa-app-template/issues"
+  },
+  "homepage": "https://github.com/henryfjordan/alexa-app-template#readme",
+  "dependencies": {
+    "alexa-app": "^2.1.2",
+    "requests": "^0.1.6",
+    "striptags": "^2.0.2"
+  }
+}

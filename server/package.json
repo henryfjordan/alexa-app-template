@@ -1,0 +1,25 @@
+{
+  "name": "alexa-app-server",
+  "version": "1.0.0",
+  "description": "The server for an alexa skill",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henryfjordan/alexa-app-template.git"
+  },
+  "keywords": [
+    "alexa"
+  ],
+  "author": "Henry Jordan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/henryfjordan/alexa-app-template/issues"
+  },
+  "homepage": "https://github.com/henryfjordan/alexa-app-template#readme",
+  "dependencies": {
+    "hapi": "^8.8.1"
+  }
+}

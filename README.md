@@ -15,7 +15,7 @@ For anything that must reside on your home network (pysical devices, files, etc.
 
 To get everything setup, run
 ``` bash
-npm install 
+npm install
 ```
 
 Edit your alexa skill. Then, to get Intent Schema and Utterances for the registration process, run
