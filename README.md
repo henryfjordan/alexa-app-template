@@ -67,7 +67,7 @@ cd server && npm install
 ```
 
 Then you'll want to configure your web server. I use [Nginx](http://www.nginx.com). You can add the following to the `server` block in the nginx.conf file or configure your own web server
-```nginx configuration file
+```nginx
 location /alexa {
     proxy_pass http://127.0.0.1:8012;
 }
