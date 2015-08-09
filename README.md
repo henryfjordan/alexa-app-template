@@ -1,5 +1,9 @@
 # alexa-app-template
-A template for an app using alexa-app.
+A template for an Alexa Skill using [alexa-app](http://github.com/matt-kruse/alexa-app).
+
+## Amazon Echo
+
+The Amazon Echo is a device sold by Amazon that offers voice-recognition as a service. The device can recognize verbal commands and respond. While it's skillset is currently limited, Amazon allows developers to add functionality called Skills. This repo is an example of how to set up your own Alexa Skills.
 
 ## Alexa Skill Philosophy
 
@@ -9,13 +13,13 @@ This template attempts to solve the problem of where to host an Alexa Skill by g
 
 I propose that a Skill should be hosted on AWS Lambda and only concern itself with querying an API endpoint and formatting the response.
 
-For anything that must reside on your home network (pysical devices, files, etc.) you can set up a server with Express, Flask, or whatever framework you are familiar with.
+For anything that tracks a state or must reside on your own network (pysical devices, files, databases, etc.) you can set up a server with Express, Flask, or whatever framework you are familiar with. These things should all be exposed by an API for security.
 
 ## Use
 
-To get everything setup, run
-``` bash
-npm install
+To get everything setup, first clone the  git repository:
+```bash
+git clone https://github.com/henryfjordan/alexa-app-template.git
 ```
 
 Edit your alexa skill. Then, to get Intent Schema and Utterances for the registration process, run
@@ -29,7 +33,7 @@ You are now ready to test it on your own Amazon Echo
 
 ## TODO
 
-- [ ] Add example server in Flask and Hapi (the two I know)
+- [X] Add example server in Hapi
 - [ ] Extend the use section to cover the upload/registration process
 - [ ] Explain why Lambda is great, especially for echo use
 - [ ] Set up API keys in examples for private APIs at home
