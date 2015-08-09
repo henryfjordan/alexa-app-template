@@ -85,4 +85,5 @@ At this point, you should be able to use your Alexa Skill on your own Amazon Ech
 ## TODO
 
 - [ ] Set up API keys in examples for private APIs at home
+- [ ] Error handling
 - [ ] Add list of example skills derived from this template
