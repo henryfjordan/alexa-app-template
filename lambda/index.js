@@ -1,24 +1,36 @@
 var alexa = require('alexa-app');
-var request_lib = require('request');
+var httpRequest = require('request');
 
 // Make an app instance
 var app = new alexa.app();
 
 // Launch runs when a user queries the skill without an intent
-app.launch(function(request,response) {
-	response.say("I can poll an API and then format and read the response")
+app.launch(function(request, response) {
+	httpRequest.get(
+		{
+			url: "http://urchin.henryfjordan.com/alexa",
+		},
+		function(err, httpResponse, body){
+			response.say(decodeURI(body));
+			response.card("Example", decodeURI(body));
+			response.send();
+		}
+	);
 });
 
 // An intent
 app.intent('ExampleIntent',
   {
-    "slots":{}
-    ,"utterances":[ "{try|test} me out", "run a test", "test" ]
+    "slots":{"name":"LITERAL"},
+		"utterances":[ "my {name is|name's} {name|NAME}"]
   },
-  function(request,response) {
-		request_lib.get(
+  function(request, response) {
+
+		var name = request.slot('name');
+
+		httpRequest.get(
 			{
-				url: 'http://example.com/alexa/',
+				url: "http://urchin.henryfjordan.com/alexa/" + encodeURIComponent(name),
 			},
 			function(err, httpResponse, body){
 				response.say(decodeURI(body));
@@ -26,7 +38,7 @@ app.intent('ExampleIntent',
 				response.send();
 		 	}
 		);
-
+		
 		return false;
   }
 );
