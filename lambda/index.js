@@ -16,6 +16,8 @@ app.launch(function(request, response) {
 			response.send();
 		}
 	);
+	
+	return false;
 });
 
 // An intent
@@ -38,7 +40,7 @@ app.intent('ExampleIntent',
 				response.send();
 		 	}
 		);
-		
+
 		return false;
   }
 );
