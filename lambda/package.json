@@ -21,7 +21,6 @@
   "homepage": "https://github.com/henryfjordan/alexa-app-template#readme",
   "dependencies": {
     "alexa-app": "^2.1.2",
-    "requests": "^0.1.6",
-    "striptags": "^2.0.2"
+    "request": "^2.60.0"
   }
 }
