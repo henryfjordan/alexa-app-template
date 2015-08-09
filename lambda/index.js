@@ -8,7 +8,8 @@ var app = new alexa.app();
 app.launch(function(request, response) {
     httpRequest.get(
         {
-            url: "http://urchin.henryfjordan.com/alexa",
+					  // Change me to your server URL
+            url: "http://example.com/alexa",
         },
         function(err, httpResponse, body){
             response.say(decodeURI(body));
@@ -32,7 +33,8 @@ app.intent('ExampleIntent',
 
         httpRequest.get(
             {
-                url: "http://urchin.henryfjordan.com/alexa/" + encodeURIComponent(name),
+							  // change me to your server URL
+                url: "http://example.com/alexa/" + encodeURIComponent(name),
             },
             function(err, httpResponse, body){
                 response.say(decodeURI(body));
